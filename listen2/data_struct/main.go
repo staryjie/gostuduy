@@ -138,10 +138,23 @@ func oper_string() {
 
 }
 
+func operator_signal() {
+	// 操作符
+
+	fmt.Println(2 == 2)
+	fmt.Println(2 != 2)
+	fmt.Println(2 > 2)
+	fmt.Println(2 < 2)
+	fmt.Println(2 >= 2)
+	fmt.Println(2 <= 2)
+
+}
+
 func main() {
 	// bool_demo()
 	// int_demo()
 	// float_demo()
 	// string_demo()
-	oper_string()
+	// oper_string()
+	operator_signal()
 }
