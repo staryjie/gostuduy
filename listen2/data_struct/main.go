@@ -64,8 +64,35 @@ func float_demo() {
 	fmt.Printf("%d %.2f %x\n", i, f2, i)
 }
 
+func string_demo() {
+	var s string
+
+	fmt.Println(s) // 默认值是空字符串
+
+	s = "hello"
+	fmt.Println(s)
+
+	s1 := "world"
+
+	fmt.Println(s1)
+
+	// 格式化输出
+	fmt.Printf("s = %s s1 = %v\n", s, s1) // %v 万能输出占位符
+
+	// 反引号
+	s3 := `hello
+world\t
+this
+is\n
+a
+string`
+
+	fmt.Println(s3)
+}
+
 func main() {
 	// bool_demo()
 	// int_demo()
-	float_demo()
+	// float_demo()
+	string_demo()
 }
