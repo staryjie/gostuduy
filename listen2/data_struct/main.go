@@ -47,7 +47,25 @@ func int_demo() {
 	fmt.Printf("b = %d\n", b)
 }
 
+func float_demo() {
+	var f1 float32
+	var f2 float64
+
+	fmt.Println(f1, f2)
+
+	f1 = 5.6
+	f2 = 6.18
+	fmt.Println(f1, f2)
+
+	i := int(f2) // 类型转换
+	fmt.Println(i)
+
+	// 格式化输出
+	fmt.Printf("%d %.2f %x\n", i, f2, i)
+}
+
 func main() {
 	// bool_demo()
-	int_demo()
+	// int_demo()
+	float_demo()
 }
