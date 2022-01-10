@@ -2,7 +2,10 @@ package main
 
 // 数据类型
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func bool_demo() {
 	// 布尔型
@@ -90,9 +93,55 @@ string`
 	fmt.Println(s3)
 }
 
+func oper_string() {
+	s1 := "hello"
+
+	fmt.Printf("the len of s1 is %d\n", len(s1)) // len() 求字符串长度
+
+	// 字符串拼接
+	s2 := " world"
+	fmt.Println(s1 + s2)
+
+	newS := fmt.Sprint(s1, s2)
+	fmt.Println(newS)
+
+	bs := strings.Builder{}
+	bs.WriteString(s1)
+	bs.WriteString(s2)
+
+	fmt.Println(bs.String())
+
+	// sl := []string{"hello", "world"}
+	sl := []string{s1, s2}
+	fmt.Println(strings.Join(sl, ""))
+
+	// 字符串分割
+	ipaddr := "192.168.5.1;192.168.5.231;192.168.5.74"
+	ips := strings.Split(ipaddr, ";")
+	fmt.Println(ips)
+	fmt.Println(ips[0])
+	fmt.Println(ips[1])
+	fmt.Println(ips[2])
+
+	// 字符串包含
+	fmt.Println(strings.Contains(ipaddr, "192.168.5.1"))
+
+	// 判断字符串开头结尾
+	fmt.Println(strings.HasPrefix(ipaddr, "192"))
+	fmt.Println(strings.HasSuffix(ipaddr, "74"))
+
+	// 寻找元素索引
+	fmt.Println(strings.Index(ipaddr, "231"))
+	fmt.Println(strings.Index(ipaddr, "wqwq")) // -1
+
+	fmt.Println(strings.LastIndex(ipaddr, "5"))
+
+}
+
 func main() {
 	// bool_demo()
 	// int_demo()
 	// float_demo()
-	string_demo()
+	// string_demo()
+	oper_string()
 }
