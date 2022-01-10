@@ -1,8 +1,11 @@
 package main
 
+// 数据类型
+
 import "fmt"
 
 func main() {
+	// 布尔型
 	var b bool // 没有赋值，默认值为false
 	fmt.Println(b)
 
