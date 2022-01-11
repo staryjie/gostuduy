@@ -26,8 +26,17 @@ func continue_expr() {
 	}
 }
 
+func simpale_for() {
+	var i = 1
+	for i <= 10 {
+		fmt.Printf("i=%d\n", i)
+		i += 2
+	}
+}
+
 func main() {
 	// for_expr()
 	// break_expr()
-	continue_expr()
+	// continue_expr()
+	simpale_for()
 }
