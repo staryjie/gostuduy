@@ -59,9 +59,23 @@ func switch_expr() {
 	}
 }
 
+func switch_fallthrough() {
+	num := 50
+	switch {
+	case num >= 0 && num <= 50:
+		fmt.Println("0 <= num <= 50")
+		fallthrough
+	case num > 50 && num <= 100:
+		fmt.Println("50 < num <= 100")
+	case num > 100 && num <= 150:
+		fmt.Println("100 < num <= 150")
+	}
+}
+
 func main() {
 	// switch_demo()
 	// init_switch()
 	// case_mutil()
-	switch_expr()
+	// switch_expr()
+	switch_fallthrough()
 }
