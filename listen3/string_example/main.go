@@ -23,9 +23,28 @@ func ReverseStringCn(s string) string {
 	return string(rs)
 }
 
+func Huiwen(s string) bool {
+	rs := []rune(s)
+
+	for i := 0; i < len(rs)/2; i++ {
+		tmp := rs[len(rs)-i-1]
+		rs[len(rs)-i-1] = rs[i]
+		rs[i] = tmp
+	}
+	s2 := string(rs)
+
+	if s == s2 {
+		return true
+	} else {
+		return false
+	}
+
+}
+
 func main() {
-	s := "hello中文"
+	s := "上海自来水来自海上"
 	// res := ReverseString(s)
-	res := ReverseStringCn(s)
-	fmt.Println(res)
+	// res := ReverseStringCn(s)
+	// fmt.Println(res)
+	fmt.Println(Huiwen(s))
 }
