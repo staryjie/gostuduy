@@ -8,6 +8,16 @@ func for_expr() {
 	}
 }
 
+func break_expr() {
+	for i := 1; i <= 10; i++ {
+		if i > 5 {
+			break
+		}
+		fmt.Printf("i=%d\n", i)
+	}
+}
+
 func main() {
-	for_expr()
+	// for_expr()
+	break_expr()
 }
