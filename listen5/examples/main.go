@@ -46,7 +46,36 @@ func daffodils_number() {
 	}
 }
 
+func calc(s string) (charCount, numCount, spaceCount, otherCount int) {
+	rs := []rune(s)
+
+	for i := 0; i < len(rs); i++ {
+		if (rs[i] >= 'a' && rs[i] <= 'z') || (rs[i] >= 'A' && rs[i] <= 'Z') {
+			charCount += 1
+			continue
+		}
+
+		if rs[i] >= '0' && rs[i] <= '9' {
+			numCount += 1
+			continue
+		}
+
+		if rs[i] == ' ' {
+			spaceCount += 1
+			continue
+		}
+
+		otherCount += 1
+	}
+	return
+}
+
 func main() {
 	// prime_number()
-	daffodils_number()
+	// daffodils_number()
+
+	s := "abc12 &sa*sa 12s1s爱我中华"
+	charCount, numCount, spaceCount, otherCount := calc(s)
+
+	fmt.Printf("Char Count: %d\nNumber Count: %d\nSpace Count: %d\nOther Count: %d\n", charCount, numCount, spaceCount, otherCount)
 }
