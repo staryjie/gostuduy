@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"time"
 )
 
@@ -64,6 +65,16 @@ func timeFormat() {
 	fmt.Println(now.Format("2006/01/02 15:04:05"))
 }
 
+func timeConsume() {
+	begin := time.Now()
+	fmt.Println("Do some tasks...")
+	rand.Seed(time.Now().UnixMilli())
+	time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
+	res := time.Since(begin).Microseconds()
+
+	fmt.Printf("程序执行耗时: %d微秒\n", res)
+}
+
 func main() {
 	// testTime()
 
@@ -79,5 +90,8 @@ func main() {
 
 	// 时间常量
 	// timeConst()
-	timeFormat()
+	// timeFormat()
+
+	// 统计时间差
+	timeConsume()
 }
