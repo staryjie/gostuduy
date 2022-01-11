@@ -8,6 +8,15 @@ func defer_demo() {
 	fmt.Println("Hi")
 }
 
+func mutil_defer() {
+	defer fmt.Println("a")
+	defer fmt.Println("b")
+	defer fmt.Println("c")
+
+	fmt.Println("d")
+}
+
 func main() {
-	defer_demo()
+	// defer_demo()
+	mutil_defer()
 }
