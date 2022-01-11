@@ -37,7 +37,18 @@ func init_switch() {
 	}
 }
 
+func case_mutil() {
+	var a string = "i"
+	switch a {
+	case "a", "e", "i", "o", "u":
+		fmt.Println("vowel")
+	default:
+		fmt.Println("not a vowel")
+	}
+}
+
 func main() {
 	// switch_demo()
-	init_switch()
+	// init_switch()
+	case_mutil()
 }
