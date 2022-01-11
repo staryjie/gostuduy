@@ -38,11 +38,30 @@ func TranslateTimeStamp(timestamp int64) string {
 	return res
 }
 
+func ProcessTask() {
+	fmt.Println("Do Task!")
+}
+
 func timeTicker() {
 	ticker := time.Tick(time.Second) // 返回一个channel
 	for i := range ticker {          // 遍历channel实现定时器
 		fmt.Println(i.Format("2006-01-02 15:04:05"))
+		ProcessTask()
 	}
+}
+
+func timeConst() {
+	// 时间常量
+	fmt.Printf("纳秒: %d\n", time.Nanosecond)
+	fmt.Printf("微秒: %d\n", time.Millisecond)
+	fmt.Printf("毫秒: %d\n", time.Microsecond)
+	fmt.Printf("秒  : %d\n", time.Second)
+}
+
+func timeFormat() {
+	now := time.Now()
+
+	fmt.Println(now.Format("2006/01/02 15:04:05"))
 }
 
 func main() {
@@ -56,5 +75,9 @@ func main() {
 	*/
 
 	// 定时器
-	timeTicker()
+	// timeTicker()
+
+	// 时间常量
+	// timeConst()
+	timeFormat()
 }
