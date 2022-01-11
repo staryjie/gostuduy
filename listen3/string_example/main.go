@@ -13,8 +13,19 @@ func ReverseString(s string) string {
 	return string(bs)
 }
 
+func ReverseStringCn(s string) string {
+	var rs []rune = []rune(s)
+	for i := 0; i < len(rs)/2; i++ {
+		tmp := rs[len(rs)-i-1]
+		rs[len(rs)-i-1] = rs[i]
+		rs[i] = tmp
+	}
+	return string(rs)
+}
+
 func main() {
-	s := "hello"
-	res := ReverseString(s)
+	s := "hello中文"
+	// res := ReverseString(s)
+	res := ReverseStringCn(s)
 	fmt.Println(res)
 }
