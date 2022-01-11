@@ -26,8 +26,18 @@ func defer_in_for() {
 
 }
 
+func defer_assign() {
+	// defer语句中使用变量，编译时就完成赋值了
+	var a int = 0
+	defer fmt.Printf("defer: a = %d\n", a) // 编译到这里的时候，a=0， 直接赋值
+
+	a = 1000
+	fmt.Printf("a = %d\n", a)
+}
+
 func main() {
 	// defer_demo()
 	// mutil_defer()
-	defer_in_for()
+	// defer_in_for()
+	defer_assign()
 }
