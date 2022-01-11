@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func for_expr() {
 	for i := 1; i <= 10; i++ {
@@ -40,10 +43,18 @@ func mutil_for() {
 	}
 }
 
+func forloop() {
+	// 无限循环
+	for {
+		fmt.Println(time.Now())
+	}
+}
+
 func main() {
 	// for_expr()
 	// break_expr()
 	// continue_expr()
 	// simpale_for()
-	mutil_for()
+	// mutil_for()
+	forloop()
 }
