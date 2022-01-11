@@ -16,7 +16,18 @@ func mutil_defer() {
 	fmt.Println("d")
 }
 
+func defer_in_for() {
+	for i := 1; i <= 5; i++ {
+		defer fmt.Printf("i = %d\n", i)
+	}
+
+	fmt.Println("Running...")
+	fmt.Println("return")
+
+}
+
 func main() {
 	// defer_demo()
-	mutil_defer()
+	// mutil_defer()
+	defer_in_for()
 }
