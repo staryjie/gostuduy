@@ -17,7 +17,17 @@ func break_expr() {
 	}
 }
 
+func continue_expr() {
+	for i := 1; i <= 10; i++ {
+		if i%2 == 0 {
+			continue
+		}
+		fmt.Printf("i=%d\n", i)
+	}
+}
+
 func main() {
 	// for_expr()
-	break_expr()
+	// break_expr()
+	continue_expr()
 }
