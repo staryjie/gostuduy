@@ -34,9 +34,16 @@ func simpale_for() {
 	}
 }
 
+func mutil_for() {
+	for no, i := 10, 1; i < 10 && no < 19; i, no = i+1, no+1 {
+		fmt.Printf("%d * %d = %d\n", no, i, no*i)
+	}
+}
+
 func main() {
 	// for_expr()
 	// break_expr()
 	// continue_expr()
-	simpale_for()
+	// simpale_for()
+	mutil_for()
 }
