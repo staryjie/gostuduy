@@ -8,6 +8,10 @@ func add(a, b int) int {
 	return a + b
 }
 
+func sub(a, b int) int {
+	return a - b
+}
+
 func anonymous() {
 	f1 := add
 	fmt.Printf("%T\n", f1)
@@ -37,8 +41,20 @@ func defer_anonymous() {
 	return
 }
 
+func calc(a, b int, op func(int, int) int) int {
+	return op(a, b)
+}
+
+func func_as_arg() {
+	sum := calc(100, 200, add)
+	sub := calc(300, 100, sub)
+
+	fmt.Printf("sum = %d\nsub = %d\n", sum, sub)
+}
+
 func main() {
 	//anonymous()
 	// anonymous_demo()
-	defer_anonymous()
+	//defer_anonymous()
+	func_as_arg()
 }
