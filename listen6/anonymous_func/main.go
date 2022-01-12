@@ -15,6 +15,17 @@ func anonymous() {
 	fmt.Printf("3 + 4 = %d\n", sum)
 }
 
+func anonymous_demo() {
+	f := func(a, b int) int {
+		return a + b
+	}
+	fmt.Printf("%T\n", f)
+
+	sum := f(2, 5)
+	fmt.Printf("2 + 5 = %d\n", sum)
+}
+
 func main() {
-	anonymous()
+	//anonymous()
+	anonymous_demo()
 }
