@@ -25,7 +25,20 @@ func anonymous_demo() {
 	fmt.Printf("2 + 5 = %d\n", sum)
 }
 
+func defer_anonymous() {
+	i := 100
+	defer fmt.Printf("defer: i = %d\n", i)
+	defer func() {
+		fmt.Printf("defer func: i = %d\n", i)
+	}()
+	i = 200
+	fmt.Println(i)
+
+	return
+}
+
 func main() {
 	//anonymous()
-	anonymous_demo()
+	// anonymous_demo()
+	defer_anonymous()
 }
