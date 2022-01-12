@@ -12,8 +12,9 @@ func globalVariable() {
 }
 
 func localVariable() {
-	var b int = 99 // 局部变量,在函数内部
-	fmt.Printf("b = %d\n", b)
+	var a int = 1000
+	var b int = 99                      // 局部变量,在函数内部
+	fmt.Printf("a = %d b = %d\n", a, b) // 局部变量与全局变量同名，局部变量优先级高
 
 	if b == 99 {
 		var c int = 98 // 局部变量,在语句块内
