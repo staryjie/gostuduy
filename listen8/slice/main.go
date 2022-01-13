@@ -31,8 +31,27 @@ func testSlice3() {
 	fmt.Println(s)
 }
 
+func testSlice4() {
+	// 切片的常用操作
+	a := [5]int{76, 77, 78, 79, 80} // 数组
+	var b []int
+	b = a[1:4]
+
+	fmt.Printf("b = %v\n", b)
+
+	c := a[1:]
+	fmt.Printf("c = %v\n", c)
+
+	d := a[:3]
+	fmt.Printf("d = %v\n", d)
+
+	e := a[:]
+	fmt.Printf("e = %v\n", e)
+}
+
 func main() {
 	// testSlice1()
 	// testSlice2()
-	testSlice3()
+	// testSlice3()
+	testSlice4()
 }
