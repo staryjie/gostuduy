@@ -26,7 +26,13 @@ func testSlice2() {
 	fmt.Printf("b[2] = %d\n", b[2])
 }
 
+func testSlice3() {
+	s := []int{1, 2, 3, 4, 5}
+	fmt.Println(s)
+}
+
 func main() {
 	// testSlice1()
-	testSlice2()
+	// testSlice2()
+	testSlice3()
 }
