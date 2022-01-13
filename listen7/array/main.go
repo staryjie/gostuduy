@@ -21,13 +21,13 @@ func testArray2() {
 }
 
 func testArray3() {
-	var a [5]int = [5]int{1, 2, 3, 4, 5}
-	var b [5]int
-	b = a
+	var arr3 [5]int = [5]int{1, 2, 3, 4, 5}
+	var brr [5]int
+	brr = arr3
 
-	b[3] = 8
-	fmt.Printf("a = %v\n", a)
-	fmt.Printf("b = %v\n", b)
+	brr[3] = 8
+	fmt.Printf("arr3 = %v\n", arr3)
+	fmt.Printf("brr = %v\n", brr)
 }
 
 func main() {
