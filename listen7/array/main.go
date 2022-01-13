@@ -30,8 +30,14 @@ func testArray3() {
 	fmt.Printf("brr = %v\n", brr)
 }
 
+func testArray4() {
+	arr4 := [5]int{1, 2, 3, 4, 5}
+	fmt.Printf("len arr4 = %d\n", len(arr4))
+}
+
 func main() {
 	// testArray1()
 	// testArray2()
-	testArray3()
+	// testArray3()
+	testArray4()
 }
