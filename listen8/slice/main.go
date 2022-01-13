@@ -21,6 +21,9 @@ func testSlice2() {
 	b = a[1:4]
 
 	fmt.Println(b)
+	fmt.Printf("b[0] = %d\n", b[0])
+	fmt.Printf("b[1] = %d\n", b[1])
+	fmt.Printf("b[2] = %d\n", b[2])
 }
 
 func main() {
