@@ -31,7 +31,16 @@ func slicLenCap() {
 	fmt.Printf("len=cap之后扩容:\na = %v\nlen a = %d\ncap a = %d\naddr a = %p\n", a, len(a), cap(a), &a)
 }
 
+func testCap() {
+	a := [...]string{"a", "b", "c", "d", "e", "f", "g", "h"}
+
+	b := a[1:3]
+	fmt.Printf("len a = %d\ncap b = %d\n", len(b), cap(b)) // len = 2 cap = 7
+	// a的长度为8，a[1:3]只有两个元素，a[0]并不在b能操作的范围，所以cap = 8 -1 = 7
+}
+
 func main() {
 	// testMake()
-	slicLenCap()
+	// slicLenCap()
+	testCap()
 }
