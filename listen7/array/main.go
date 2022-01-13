@@ -86,6 +86,24 @@ func testArray8() {
 	fmt.Printf("a = %d  b = %d\n", a, b)
 }
 
+func modify(arr [3]int) {
+	arr[0] = 1000
+}
+
+func testArray9() {
+	arr9 := [3]int{1, 2, 3}
+	brr := arr9 // 数组的拷贝是值拷贝
+	brr[0] = 999
+
+	fmt.Printf("arr9 = %v\n", arr9)
+	fmt.Printf("brr = %v\n", brr)
+
+	modify(arr9) // 数组传参也是传递值拷贝
+
+	fmt.Printf("arr9 = %v\n", arr9)
+
+}
+
 func main() {
 	// testArray1()
 	// testArray2()
@@ -94,5 +112,6 @@ func main() {
 	// testArray5()
 	// testArray6()
 	// testArray7()
-	testArray8()
+	// testArray8()
+	testArray9()
 }
