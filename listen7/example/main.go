@@ -27,6 +27,23 @@ func testArraySum() {
 	fmt.Printf("sum = %d\n", sum)
 }
 
+func targetIndex(arr [5]int, target int) {
+	for i := 0; i < len(arr); i++ {
+		three := target - arr[i]
+		for j := 0; j < len(arr); j++ {
+			if arr[j] == three {
+				fmt.Printf("arr[%d] + arr[%d] = %d\n", i, j, target)
+			}
+		}
+	}
+}
+
+func testSumIndex() {
+	arr := [...]int{1, 3, 5, 8, 7}
+	targetIndex(arr, 8)
+}
+
 func main() {
-	testArraySum()
+	// testArraySum()
+	testSumIndex()
 }
