@@ -30,7 +30,7 @@ func testArraySum() {
 func targetIndex(arr [5]int, target int) {
 	for i := 0; i < len(arr); i++ {
 		three := target - arr[i]
-		for j := 0; j < len(arr); j++ {
+		for j := i + 1; j < len(arr); j++ {
 			if arr[j] == three {
 				fmt.Printf("arr[%d] + arr[%d] = %d\n", i, j, target)
 			}
