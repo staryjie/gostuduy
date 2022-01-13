@@ -79,6 +79,13 @@ func testArray7() {
 	}
 }
 
+func testArray8() {
+	var a int = 1000
+	b := a // 基本数据类型的赋值是值拷贝
+	b = 3000
+	fmt.Printf("a = %d  b = %d\n", a, b)
+}
+
 func main() {
 	// testArray1()
 	// testArray2()
@@ -86,5 +93,6 @@ func main() {
 	// testArray4()
 	// testArray5()
 	// testArray6()
-	testArray7()
+	// testArray7()
+	testArray8()
 }
