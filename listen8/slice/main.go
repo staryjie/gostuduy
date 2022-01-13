@@ -49,9 +49,32 @@ func testSlice4() {
 	fmt.Printf("e = %v\n", e)
 }
 
+func testSlice5() {
+	// 切片的修改
+	a := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Printf("a = %v type\na: %T\n", a, a)
+
+	b := a[2:5]
+	fmt.Printf("b = %v type\nb: %T\n", b, b)
+
+	/*
+		b[0] = b[0] + 10
+		b[1] = b[1] + 10
+		b[2] = b[2] + 10
+
+		fmt.Printf("a = %v\nb = %v\n", a, b) // a 和 b 中对应的元素都发生改变，因为切片底层引用的就是数组中的地址
+	*/
+
+	for index := range b {
+		b[index] += 10
+	}
+	fmt.Printf("a = %v\nb = %v\n", a, b)
+}
+
 func main() {
 	// testSlice1()
 	// testSlice2()
 	// testSlice3()
-	testSlice4()
+	// testSlice4()
+	testSlice5()
 }
