@@ -20,7 +20,18 @@ func testArray2() {
 	fmt.Println(arr2)
 }
 
+func testArray3() {
+	var a [5]int = [5]int{1, 2, 3, 4, 5}
+	var b [5]int
+	b = a
+
+	b[3] = 8
+	fmt.Printf("a = %v\n", a)
+	fmt.Printf("b = %v\n", b)
+}
+
 func main() {
 	// testArray1()
-	testArray2()
+	// testArray2()
+	testArray3()
 }
