@@ -51,11 +51,40 @@ func testArray6() {
 	}
 }
 
+func testArray7() {
+	// 二维数组
+	var arr7 [3][2]int
+	fmt.Println(arr7)
+
+	arr7[0][0] = 10
+	arr7[0][1] = 11
+	arr7[1][0] = 20
+	arr7[1][1] = 21
+	arr7[2][0] = 30
+	arr7[2][1] = 31
+
+	fmt.Println(arr7)
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("arr7[%d][%d] = %d\n", i, j, arr7[i][j])
+		}
+	}
+	fmt.Println()
+	for i, e := range arr7 {
+		// fmt.Printf("arr7 row[%d] = %v\n", i, e)
+		for j, e2 := range e {
+			fmt.Printf("arr7[%d][%d] = %d\n", i, j, e2)
+		}
+	}
+}
+
 func main() {
 	// testArray1()
 	// testArray2()
 	// testArray3()
 	// testArray4()
 	// testArray5()
-	testArray6()
+	// testArray6()
+	testArray7()
 }
