@@ -15,6 +15,15 @@ func testSlice1() {
 	a[0] = 100
 }
 
+func testSlice2() {
+	a := [5]int{76, 77, 78, 79, 80} // 数组
+	var b []int
+	b = a[1:4]
+
+	fmt.Println(b)
+}
+
 func main() {
-	testSlice1()
+	// testSlice1()
+	testSlice2()
 }
