@@ -68,7 +68,20 @@ func testSlice5() {
 	for index := range b {
 		b[index] += 10
 	}
-	fmt.Printf("a = %v\nb = %v\n", a, b)
+	fmt.Printf("a = %v\nb = %v\n", a, b) // 切片是数组的引用
+}
+
+func testSlice6() {
+	a := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	s1 := a[:]
+	s2 := a[:]
+
+	fmt.Printf("Before change a = %v\n", a)
+	s1[0] = 100
+	fmt.Printf("After s1[0] changed a = %v\n", a)
+	s2[1] = 200
+	fmt.Printf("After s2[1] changed a = %v\n", a)
 }
 
 func main() {
@@ -76,5 +89,6 @@ func main() {
 	// testSlice2()
 	// testSlice3()
 	// testSlice4()
-	testSlice5()
+	// testSlice5()
+	testSlice6()
 }
