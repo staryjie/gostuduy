@@ -35,9 +35,27 @@ func testArray4() {
 	fmt.Printf("len arr4 = %d\n", len(arr4))
 }
 
+func testArray5() {
+	// for循环遍历数组
+	arr5 := [5]int{2: 400, 4: 350}
+	for i := 0; i < len(arr5); i++ {
+		fmt.Printf("arr5[%d] = %d\n", i, arr5[i])
+	}
+}
+
+func testArray6() {
+	// for range遍历数组
+	arr6 := [5]int{1, 2, 3, 4, 5}
+	for i, e := range arr6 {
+		fmt.Printf("arr6[%d] = %d\n", i, e)
+	}
+}
+
 func main() {
 	// testArray1()
 	// testArray2()
 	// testArray3()
-	testArray4()
+	// testArray4()
+	// testArray5()
+	testArray6()
 }
