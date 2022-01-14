@@ -42,8 +42,21 @@ func testCap() {
 	fmt.Printf("再切片：len b = %d\ncap b = %d\n", len(b), cap(b))
 }
 
+func testSlice() {
+	var a []int
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a))
+
+	if a == nil {
+		fmt.Println("a is nil")
+	}
+
+	// a[0] = 100  // index out of range [0] with length 0  空切片无法直接访问
+
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
-	testCap()
+	// testCap()
+	testSlice()
 }
