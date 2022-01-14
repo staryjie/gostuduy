@@ -86,11 +86,22 @@ func testPoint6() {
 	fmt.Printf("a = %d\tb=%d\n", a, b)
 }
 
+func testPoint7() {
+	var a int = 10
+	var b *int = &a
+	var c *int = b
+	fmt.Printf("a = %d\t*b=%d\t*c=%d\n", a, *b, *c)
+
+	*c = 100
+	fmt.Printf("a = %d\t*b=%d\t*c=%d\n", a, *b, *c)
+}
+
 func main() {
 	// testPoint1()
 	// testPoint2()
 	// testPoint3()
 	// testPoint4()
 	// testPoint5()
-	testPoint6()
+	// testPoint6()
+	testPoint7()
 }
