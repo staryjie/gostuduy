@@ -94,10 +94,19 @@ func testSubSliceCap() {
 	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
 }
 
+func testAppend() {
+	a := []int{1, 3, 5}
+	b := []int{7, 9, 11}
+
+	a = append(a, b...) // 将一个切片追加到另一个切片中
+	fmt.Printf("a = %v\n", a)
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
 	// testCap()
 	// testSlice()
-	testSubSliceCap()
+	// testSubSliceCap()
+	testAppend()
 }
