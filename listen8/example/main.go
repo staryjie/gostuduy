@@ -19,6 +19,10 @@ func sortArray() {
 	a := [5]int{5, 7, 3, 9, 2}
 	sort.Ints(a[:])
 	fmt.Println(a)
+
+	s := [5]string{"g", "h", "f", "a", "d"}
+	sort.Strings(s[:])
+	fmt.Println(s)
 }
 
 func main() {
