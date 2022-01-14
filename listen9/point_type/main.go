@@ -67,7 +67,7 @@ func testPoint5() {
 		fmt.Println("*b is nil")
 	}
 	// nil的时候无法直接操作
-	(*b) = make([]int, 3, 5)          // make 为内建类型slice、map和channel分配内存，并可以指定长度和容量
+	(*b) = make([]int, 3, 5)          // make 为内建类型slice、map和channel分配内存，并可以指定长度和容量 make还能完成初始化
 	fmt.Printf("b指针地址存储的值为:%v\n", *b) // [0 0 0]
 	(*b)[0] = 100
 	(*b)[1] = 200
