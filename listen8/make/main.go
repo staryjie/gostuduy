@@ -52,6 +52,21 @@ func testSlice() {
 
 	// a[0] = 100  // index out of range [0] with length 0  空切片无法直接访问
 
+	// 空切片可以通过append追加元素
+	a = append(a, 100)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 1 1
+
+	a = append(a, 200)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 2 2
+
+	a = append(a, 300)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 3 4
+
+	a = append(a, 400)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 4 4
+
+	a = append(a, 500)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 5 8
 }
 
 func main() {
