@@ -69,9 +69,35 @@ func testSlice() {
 	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a)) // 5 8
 }
 
+func testSubSliceCap() {
+	a := make([]int, 5, 5)
+	fmt.Printf("addr a = %p  len a = %d  cap d = %d\n", &a, len(a), cap(a))
+
+	b := a[0:3]
+	fmt.Printf("a = %v\t b = %v\n", a, b)
+	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
+
+	b = append(b, 100)
+	fmt.Printf("a = %v\t b = %v\n", a, b)
+	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
+
+	b = append(b, 200)
+	fmt.Printf("a = %v\t b = %v\n", a, b)
+	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
+
+	b = append(b, 300)
+	fmt.Printf("a = %v\t b = %v\n", a, b)
+	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
+
+	b = append(b, 400)
+	fmt.Printf("a = %v\t b = %v\n", a, b)
+	fmt.Printf("addr b = %p  len b = %d  cap b = %d\n", &b, len(b), cap(b))
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
 	// testCap()
-	testSlice()
+	// testSlice()
+	testSubSliceCap()
 }
