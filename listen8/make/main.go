@@ -162,3 +162,9 @@ func main() {
 	// copySlice()
 	loopSlice()
 }
+
+// make 和 new 的区别
+/*
+	make 为内建类型slice、map和channel分配内存
+	new 用于各种类型的内存分配，new返回的是一个指针
+*/
