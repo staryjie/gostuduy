@@ -102,11 +102,30 @@ func testAppend() {
 	fmt.Printf("a = %v\n", a)
 }
 
+func sumArray(arr []int) (sum int) {
+	for _, e := range arr {
+		sum += e
+	}
+
+	return
+}
+
+func testSumArray() {
+	a := [3]int{1, 2, 3}
+	suma := sumArray(a[:])
+	fmt.Println(suma)
+
+	b := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	sumb := sumArray(b[:])
+	fmt.Println(sumb)
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
 	// testCap()
 	// testSlice()
 	// testSubSliceCap()
-	testAppend()
+	// testAppend()
+	testSumArray()
 }
