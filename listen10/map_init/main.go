@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var m map[string]int = map[string]int{ // map初始化
+	var m map[string]int = map[string]int{ // map初始化，map必须初始化才能使用
 		"stu01": 1000,
 		"stu02": 2000,
 		"stu03": 3000,
