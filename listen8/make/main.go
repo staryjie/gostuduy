@@ -142,6 +142,14 @@ func copySlice() {
 	fmt.Println(b)
 }
 
+func loopSlice() {
+	// 遍历切片
+	a := []int{1, 2, 3, 4, 5}
+	for i, e := range a {
+		fmt.Printf("a[%d] = %d\n", i, e)
+	}
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
@@ -151,5 +159,6 @@ func main() {
 	// testAppend()
 	// testSumArray()
 	// testModifySlice()
-	copySlice()
+	// copySlice()
+	loopSlice()
 }
