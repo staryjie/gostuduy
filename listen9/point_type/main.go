@@ -33,7 +33,30 @@ func testPoint2() {
 	fmt.Printf("b指针地址存储的值为:%d\n", *b)
 }
 
+func modify(p *int) {
+	*p = 1000
+}
+
+func testPoint3() {
+	var a int = 10
+	p := &a // p为指针类型
+	modify(p)
+	fmt.Println(a)
+}
+
+func modify_arr(arr *[3]int) {
+	(*arr)[0] = 1000
+}
+
+func testPoint4() {
+	var arr [3]int = [3]int{1, 2, 3}
+	modify_arr(&arr) // 传递指针
+	fmt.Println(arr)
+}
+
 func main() {
 	// testPoint1()
-	testPoint2()
+	// testPoint2()
+	// testPoint3()
+	testPoint4()
 }
