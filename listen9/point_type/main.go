@@ -19,6 +19,21 @@ func testPoint1() {
 	fmt.Printf("the address of b: %p, *b = %v, b = %v\n", &b, *b, b) // *b 解析b指针对应的数据的值
 }
 
+func testPoint2() {
+	var a int = 200
+	var b *int = &a
+
+	fmt.Printf("a = %d\t*b = %d\n", a, *b)
+
+	fmt.Printf("b指针地址存储的值为:%d\n", *b)
+
+	*b = 1000
+	fmt.Printf("a = %d\t*b = %d\n", a, *b)
+
+	fmt.Printf("b指针地址存储的值为:%d\n", *b)
+}
+
 func main() {
-	testPoint1()
+	// testPoint1()
+	testPoint2()
 }
