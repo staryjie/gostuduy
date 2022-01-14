@@ -23,6 +23,11 @@ func sortArray() {
 	s := [5]string{"g", "h", "f", "a", "d"}
 	sort.Strings(s[:])
 	fmt.Println(s)
+
+	f := [5]float64{5.3, 4.7, 9.16, 2.85, 0.13}
+	sort.Float64s(f[:])
+
+	fmt.Println(f)
 }
 
 func main() {
