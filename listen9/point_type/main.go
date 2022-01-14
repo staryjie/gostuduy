@@ -54,9 +54,30 @@ func testPoint4() {
 	fmt.Println(arr)
 }
 
+func testPoint5() {
+	var a *int = new(int) // new()给变量分配内存,并返回一个指针
+	fmt.Printf("a指针地址存储的值为:%d\n", *a)
+
+	*a = 100
+	fmt.Printf("a指针地址存储的值为:%d\n", *a)
+
+	var b *[]int = new([]int)
+	fmt.Printf("b指针地址存储的值为:%v\n", *b)
+	if *b == nil {
+		fmt.Println("*b is nil")
+	}
+	// nil的时候无法直接操作
+	(*b) = make([]int, 3, 5)          // make 为内建类型slice、map和channel分配内存，并可以指定长度和容量
+	fmt.Printf("b指针地址存储的值为:%v\n", *b) // [0 0 0]
+	(*b)[0] = 100
+	(*b)[1] = 200
+	fmt.Printf("b指针地址存储的值为:%v\n", *b)
+}
+
 func main() {
 	// testPoint1()
 	// testPoint2()
 	// testPoint3()
-	testPoint4()
+	// testPoint4()
+	testPoint5()
 }
