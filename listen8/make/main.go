@@ -131,6 +131,17 @@ func testModifySlice() {
 	fmt.Println(a)
 }
 
+func copySlice() {
+	// a := []int{1, 2, 3}
+	a := []int{1}
+	b := []int{4, 5, 6}
+
+	copy(a, b) // 将b拷贝到a切片，拷贝元素个数取决于目标切片的长度，不会自动扩容
+
+	fmt.Println(a)
+	fmt.Println(b)
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
@@ -139,5 +150,6 @@ func main() {
 	// testSubSliceCap()
 	// testAppend()
 	// testSumArray()
-	testModifySlice()
+	// testModifySlice()
+	copySlice()
 }
