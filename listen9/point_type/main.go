@@ -74,10 +74,23 @@ func testPoint5() {
 	fmt.Printf("b指针地址存储的值为:%v\n", *b)
 }
 
+func modifyInt(a *int) {
+	*a = 1000
+}
+
+func testPoint6() {
+	var a int = 10
+	b := a
+	modifyInt(&a) // 传递指针
+
+	fmt.Printf("a = %d\tb=%d\n", a, b)
+}
+
 func main() {
 	// testPoint1()
 	// testPoint2()
 	// testPoint3()
 	// testPoint4()
-	testPoint5()
+	// testPoint5()
+	testPoint6()
 }
