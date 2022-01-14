@@ -120,6 +120,17 @@ func testSumArray() {
 	fmt.Println(sumb)
 }
 
+func modifySlice(arr []int) {
+	arr[0] = 1000
+}
+
+func testModifySlice() {
+	a := [3]int{1, 2, 3}
+	fmt.Println(a)
+	modifySlice(a[:])
+	fmt.Println(a)
+}
+
 func main() {
 	// testMake()
 	// slicLenCap()
@@ -127,5 +138,6 @@ func main() {
 	// testSlice()
 	// testSubSliceCap()
 	// testAppend()
-	testSumArray()
+	// testSumArray()
+	testModifySlice()
 }
