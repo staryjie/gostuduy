@@ -233,4 +233,16 @@ modules.xml
 # Ignore all local history of files
 .history
 
+### VisualStudioCode.gitignore ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### VisualStudioCode.patch ###
+# Ignore all local history of files
+.history
+
 ### END .gitignore -----------------------------------------
