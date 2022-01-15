@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/staryjie/gostuduy/listen6/calc"
+	"github.com/staryjie/gostudy/listen6/calc"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 
 	// sub := calc.sub(s2, s1)  // sub小写开头，无法在包外访问
 
-	fmt.Printf("A = %d\n", calc.A)
+	fmt.Printf("N1 = %d\n", calc.Num)
 	// fmt.Printf("a = %d\n", calc.a)  // a小写无法导出，无法在包外访问
-	fmt.Printf("a = %d\n", calc.Test())
+	fmt.Printf("n1 = %d\n", calc.Getnum())
 }
