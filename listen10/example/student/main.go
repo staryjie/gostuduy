@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"sort"
 	"time"
 )
 
@@ -22,8 +23,15 @@ func storeStudents(n int) {
 		stuMap[id] = stu
 	}
 
-	for k, v := range stuMap {
-		fmt.Printf("id=%d's student info\tName: %s\tAge: %d\tScore: %.2f\n", k, v.Name, v.Age, v.Score)
+	keys := make([]int, 0, n)
+	for k, _ := range stuMap {
+		keys = append(keys, k)
+	}
+
+	sort.Ints(keys)
+
+	for _, k := range keys {
+		fmt.Printf("id=%d's student info\tName: %s\tAge: %d\tScore: %.2f\n", k, stuMap[k].Name, stuMap[k].Age, stuMap[k].Score)
 	}
 }
 
