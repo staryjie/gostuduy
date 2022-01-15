@@ -19,4 +19,7 @@ func main() {
 
 	// 结构体实例成员属性访问
 	fmt.Printf("Username:%s age:%d sex:%d avataurl:%s\n", user.Username, user.Age, user.Sex, user.AvataUrl)
+
+	user2 := User{Username: "Tim", Age: 20, Sex: 1, AvataUrl: "https://www.baidu.com"}
+	fmt.Printf("Username:%s age:%d sex:%d avataurl:%s\n", user2.Username, user2.Age, user2.Sex, user2.AvataUrl)
 }
