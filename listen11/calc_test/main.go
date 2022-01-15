@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/staryjie/gostudy/listen11/calc"
+	_ "github.com/staryjie/gostudy/listen6/calc" // 引用了该包，但是没有使用该包中的任何函数或者变量，但是需要使用该包中的init函数，使用 _ 就不会报错
 )
 
 var (
