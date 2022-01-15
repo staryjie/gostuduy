@@ -11,6 +11,8 @@ type User struct { // 结构体的定义
 
 func main() {
 	var user User // 声明结构体实例
+
+	fmt.Printf("未初始化时结构体实例的默认值: %#v\n", user)
 	// 对结构体实例成员属性赋值
 	user.Age = 18
 	user.AvataUrl = "https://img2020.cnblogs.com/blog/1188507/202111/1188507-20211116110743641-1021429203.png"
