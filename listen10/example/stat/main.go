@@ -11,12 +11,15 @@ func statWordCount(str string) map[string]int {
 	result := make(map[string]int, len(words))
 
 	for _, word := range words {
-		count, ok := result[word]
-		if !ok {
-			result[word] = 1
-		} else {
-			result[word] = count + 1
-		}
+		/*
+			count, ok := result[word]
+			if !ok {
+				result[word] = 1
+			} else {
+				result[word] = count + 1
+			}
+		*/
+		result[word] += 1
 	}
 	return result
 }
