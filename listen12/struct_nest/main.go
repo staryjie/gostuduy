@@ -31,4 +31,8 @@ func main() {
 		Address: &Address{Country: "China", Province: "ZHejiang", City: "Hangzhou"},
 	}
 	fmt.Printf("user = %#v\n", user)
+
+	fmt.Println(user.Country)
+	fmt.Println(user.Province)
+	fmt.Println(user.City)
 }
