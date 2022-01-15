@@ -18,7 +18,7 @@ func storeStudents(n int) {
 
 	for i := 11; i <= n+10; i++ {
 		id := i
-		stu := Student{Age: rand.Intn(15) + 10, Name: fmt.Sprintf("stu%02d", i), Score: float64(rand.Intn(60) + 40 + int(rand.Float64()))}
+		stu := Student{Age: rand.Intn(15) + 10, Name: fmt.Sprintf("stu%02d", i), Score: float64(rand.Intn(60)+40) + rand.Float64()}
 		stuMap[id] = stu
 	}
 
