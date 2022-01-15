@@ -25,6 +25,28 @@ func sliceMap() {
 
 }
 
+func mapSlice() {
+	m := make(map[string][]int, 16)
+
+	key := "stu01"
+
+	sliceSource, ok := m[key]
+	if !ok {
+		m[key] = make([]int, 0, 16)
+		sliceSource = m[key]
+	}
+
+	sliceSource = append(sliceSource, 100)
+	sliceSource = append(sliceSource, 200)
+	sliceSource = append(sliceSource, 300)
+	sliceSource = append(sliceSource, 400)
+
+	m[key] = sliceSource
+
+	fmt.Printf("m = %v\n", m)
+}
+
 func main() {
-	sliceMap()
+	// sliceMap()
+	mapSlice()
 }
