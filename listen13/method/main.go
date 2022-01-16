@@ -23,6 +23,8 @@ func main() {
 	p1.PeopleInfo()
 	(&p1).Set("Jack", "Japan")
 	p1.PeopleInfo()
+	p1.Set("Haha", "There")
+	p1.PeopleInfo()
 
 	p2 := &People{Name: "Bob", Country: "America"}
 	p2.Set("Tim", "England")
