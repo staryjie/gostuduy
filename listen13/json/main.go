@@ -48,4 +48,8 @@ func main() {
 		fmt.Printf("%#v\n", *c1)
 	}
 
+	for _, s := range c1.Students {
+		fmt.Printf("stu[%d] = %v\n", s.Id, s)
+	}
+
 }
