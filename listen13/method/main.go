@@ -21,6 +21,8 @@ func (p *People) Set(name, country string) {
 func main() {
 	p1 := People{Name: "Tom", Country: "America"}
 	p1.PeopleInfo()
+	(&p1).Set("Jack", "Japan")
+	p1.PeopleInfo()
 
 	p2 := &People{Name: "Bob", Country: "America"}
 	p2.Set("Tim", "England")
