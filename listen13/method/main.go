@@ -23,7 +23,7 @@ func main() {
 	p1.PeopleInfo()
 	(&p1).Set("Jack", "Japan")
 	p1.PeopleInfo()
-	p1.Set("Haha", "There")
+	p1.Set("Haha", "There") // 实现指针类型的方法，值类型也可以直接调用，这是Go语言语法糖实现的
 	p1.PeopleInfo()
 
 	p2 := &People{Name: "Bob", Country: "America"}
