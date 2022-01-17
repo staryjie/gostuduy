@@ -28,7 +28,18 @@ func testScan() {
 	fmt.Printf("a = %d  s = %s  f = %.2f\n", a, s, f)
 }
 
+func testScanln() {
+	var (
+		a int
+		s string
+		f float64
+	)
+	fmt.Scanln(&a, &s, &f)
+	fmt.Printf("a = %d  s = %s  f = %.2f\n", a, s, f)
+}
+
 func main() {
 	// testScanf()
-	testScan()
+	// testScan()
+	testScanln()
 }
