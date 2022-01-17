@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func testInput() {
+func testScanf() {
 	var (
 		a int
 		s string
@@ -18,5 +18,5 @@ func testInput() {
 }
 
 func main() {
-	testInput()
+	testScanf()
 }
