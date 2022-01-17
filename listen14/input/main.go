@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 从终端获取用户输入  fmt
+
 func testScanf() {
 	var (
 		a int

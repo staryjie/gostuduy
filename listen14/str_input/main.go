@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 从字符串获取输入 fmt
+
 func testSscanf() {
 	var (
 		a int
