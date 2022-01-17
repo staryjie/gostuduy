@@ -6,6 +6,11 @@ func describe(a interface{}) {
 	fmt.Printf("%T %v\n", a, a)
 }
 
+type Student struct {
+	Name string
+	Sex int
+}
+
 func main() {
 	var a interface{}  // 空接口,空接口可以存放任何数据类型
 
@@ -22,4 +27,7 @@ func main() {
 	m["hello"] = 100
 	a = m
 	describe(a)
+
+	stu := Student{Name: "Tom", Sex: 1}
+	describe(stu)
 }
