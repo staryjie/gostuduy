@@ -25,7 +25,7 @@ func (d Dog) Eat() {
 }
 
 func (d Dog) Production() string {
-	production := "viviparous"
+	production := "viviparity"
 	return production
 }
 
@@ -46,7 +46,7 @@ func (p Pig) Eat() {
 }
 
 func (p Pig) Production() string {
-	production := "viviparous"
+	production := "viviparity"
 	return production
 }
 
