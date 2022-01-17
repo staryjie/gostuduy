@@ -8,9 +8,11 @@ func testSscanf() {
 		s string
 		f float64
 	)
-	var str string = "88 hi 6.8"
+	//var str string = "88 hi 6.8"
+	var str string = "88 hi\n\n 6.8"
 
-	fmt.Sscanf(str,"%d %s %f", &a, &s, &f)
+	//fmt.Sscanf(str,"%d %s %f", &a, &s, &f)
+	fmt.Sscanf(str,"%d %s %f\n", &a, &s, &f)
 	fmt.Printf("a = %d  s = %s  f = %.2f\n", a, s, f)
 }
 
