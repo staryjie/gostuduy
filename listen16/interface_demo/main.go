@@ -58,4 +58,12 @@ func main() {
 	pig.Talk()
 	pig.Eat()
 	fmt.Println(pig.Name())
+
+	fmt.Println("----------")
+
+	// 指针类型
+	d := &Dog{name: "小黑"}
+	d.Eat()
+	d.Talk()
+	fmt.Println(d.Name())
 }
